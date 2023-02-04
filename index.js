@@ -24,3 +24,19 @@ let computerSelection = getComputerChoice ()
 console.log("You choosed:" + playerSelection)
 console.log("Computer choosed:" + computerSelection)
 console.log(roundOne(playerSelection, computerSelection))
+
+let playerPoints = 0
+let computerPoints = 0
+
+function gameScore () {
+    let roundVictory = roundOne()
+    if (roundVictory === "'You win! ' + playerSelection + ' beats ' + computerSelection"){
+        playerPoints++
+    } else if (roundVictory === "'Computer win! ' + computerSelection + ' beats ' + playerSelection"){
+        computerPoints++
+    }
+}
+
+gameScore()
+console.log("Player:" + playerPoints)
+console.log("Computer:" + computerPoints)
