@@ -15,9 +15,9 @@ function playRound(playerSelection, computerSelection) {
     } else if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
     (playerSelection == 'scissors' && computerSelection == 'paper') ||
     (playerSelection == 'paper' && computerSelection == 'rock')) {
-        return 'win';
+        return true;
     } else {
-        return 'lose';
+        return false;
     }
 }
 
@@ -25,9 +25,9 @@ let playerPoints = 0;
 let computerPoints = 0;
 
 function gameScore(result) {
-    if (result === 'win'){
+    if (result === true){
         playerPoints++;
-    } else if (result === 'lose'){
+    } else if (result === false){
         computerPoints++;
     }
 }

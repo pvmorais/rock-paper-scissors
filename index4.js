@@ -92,27 +92,3 @@ const getPlayerSelection = window.onload = function() {
         }
       });
 }
-
-// for (let i = 0; i < 50; i++) {
-//     let playerSelection = '';
-//     let computerSelection = getComputerChoice();
-//     console.log("You chose: " + playerSelection);
-//     console.log("Computer chose: " + computerSelection);
-//     let roundVictory = roundOne(playerSelection, computerSelection);
-//     if (roundVictory === true) {
-//         playerPoints++
-//     } else if (roundVictory === false) {
-//         computerPoints++
-//     }
-//     console.log("Player: " + playerPoints)
-//     console.log("Computer: " + computerPoints)
-//     if (playerPoints >= 3 || computerPoints >= 3) {
-//         break
-//     }
-// }
-
-// if (playerPoints > computerPoints) {
-//     console.log("You win the game! Final score: Player " + playerPoints + " - " + computerPoints + " Computer")
-// } else if (computerPoints > playerPoints) {
-//     console.log("Computer wins the game! Final score: Player " + playerPoints + " - " + computerPoints + " Computer")
-// }
