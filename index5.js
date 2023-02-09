@@ -53,6 +53,7 @@ function roundOne(playerSelection, computerSelection) {
 // 3 - Increases the player's or computer's points based on the round result
 // 4 - Displays the result of the round and the score on the page using the element with the id "result"
 // 5 - If either the player or the computer has reached 3 points, the function declares the winner and resets the player's and computer's points.
+// 6 - Restart buttom add listener event at the end so the game can be reset
 function runGame() {
     let computerSelection = getComputerChoice();
     let roundResult = roundOne(playerSelection, computerSelection);
@@ -78,15 +79,13 @@ function runGame() {
         playerPoints = 0;
         computerPoints = 0;
     }
+    const restartButton = document.querySelector("#restartButton");
+    if (restartButton) {
+        restartButton.addEventListener("click", function() {
+        playerPoints = 0;
+        computerPoints = 0;
+        document.querySelector("#result").innerHTML = "";
+        document.querySelector("#computerChoice").innerHTML = "";
+        });
+    }
 }
-
-//This should make the buttom Restart Game work, but it is not working and I dont know why...
-const restartButton = document.querySelector("#restartButton");
-if (restartButton) {
-    restartButton.addEventListener("click", function() {
-    playerPoints = 0;
-    computerPoints = 0;
-    document.querySelector("#result").innerHTML = "";
-    });
-}
-
