@@ -1,15 +1,15 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-  }
-  
+}
+
 .buttons {
     display: flex;
     justify-content: center;
 }
 
 h1 {
-    text-align: center;
+    /* text-align: center; */
 }
   
 button {
